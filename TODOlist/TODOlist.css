@@ -1,0 +1,135 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.TodoList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  max-height: 80vh;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 9px;
+  border: 3px solid black;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.High, .Low {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  left: 235px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  width: 100%; /* Убедитесь, что контейнер занимает всю ширину родительского элемента */
+}
+
+/* Стили для формы */
+form {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Убедитесь, что форма занимает всю ширину контейнера */
+}
+
+/* Стили для поля ввода в форме */
+form input {
+  flex-grow: 1; /* Заставляет input занимать всю доступную ширину */
+  height: 45px;
+  border-radius: 6px;
+  padding: 5px 10px;
+  box-sizing: border-box; /* Учитывает отступы и границы в ширину элемента */
+  font-size: medium;
+  border: 1px solid #000; /* Граница для input */
+}
+
+/* Стили для кнопок в формах */
+form button {
+  width: 50px; /* Фиксированная ширина кнопки */
+  height: 45px; /* Высота кнопки соответствует высоте input */
+  background-color: transparent;
+  border: 1px solid #000000; /* Граница кнопки формы */
+  border-radius: 6px; /* Скругление углов кнопки формы */
+  padding: 0; /* Убираем внутренние отступы */
+  font-size: 18px; /* Размер шрифта кнопки формы */
+  cursor: pointer;
+  margin-left: 10px; /* Добавляет отступ между input и кнопкой */
+}
+
+/* Удаление обводки вокруг кнопок формы при фокусе */
+form button:focus {
+  outline: none;
+}
+
+button#addButton {
+  position: relative;
+  left: 9px;
+
+}
+button.deleteButton{
+  height: max-content;
+  font-size: 17px;
+  }
+.deleteButton {
+  position: relative;
+  cursor: pointer;
+  color: #9f9fa1;
+  left: 434px;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.circleButton {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 2;
+  /* Убедитесь, что кнопка не перекрывает текст */
+  top: 50%;
+  transform: translateY(-50%); /* Центрирование по вертикали */
+}
+
+.taskH_1, .taskH_2, .taskH_3,.taskH_new, .taskL_1,.taskL_new {
+  position: relative;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding-left: 45px; /* Увеличенный отступ для места под кружок */
+  box-sizing: border-box;
+}
+
+.taskH_1 .circleButton, 
+.taskH_2 .circleButton,
+.taskH_3 .circleButton,
+.taskH_new .circleButton,
+.taskL_1 .circleButton,
+.taskL_new .circleButton 
+ {
+  left: 10px; /* Позиция кнопки от левого края блока */
+}
+
+.circleButton.active {
+  background-color: aquamarine;
+}

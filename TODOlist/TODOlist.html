@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODOlist</title>
+    <link rel='stylesheet' href='TODOlist.css'>
+</head>
+<body>
+    <div class='TodoList'>
+        <div class='High'>
+            <h2>HIGH</h2>
+        </div>
+        <div class="input-container">
+            <form id='highTaskForm'>
+            <input id='addHigh' placeholder='Добавить важные дела'>
+            <button type='submit' id="addButton">+</button>
+        </form>
+        </div>
+        <div class="HighTasks"></div>
+
+        <div class='Low'>
+            <h2>LOW</h2>
+        </div>
+        <div class="input-container">
+            <form id='lowTaskForm'>
+            <input id='addLow' placeholder='Добавить'>
+            <button type='submit' id="addButton">+</button>
+        </form>
+        </div>
+        <div class="LowTasks"></div>
+    </div>
+    <script src="task.js"></script>
+    <script src="formHandlers.js"></script>
+</body>
+</html>

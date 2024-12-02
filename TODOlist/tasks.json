@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "text": "Купить хлеб",
+    "type": "HIGH",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "text": "выучить правила",
+    "type": "LOW",
+    "completed": false
+  }
+]
+
